@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conferencing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .video-box {
+            border: 2px solid #333;
+            border-radius: 8px;
+            width: 70%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: auto;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-box">
+            <video id="local-video" autoplay muted></video>
+            <video id="remote-video" autoplay></video>
+        </div>
+        <div class="controls">
+            <button class="btn" id="start-call">Start Call</button>
+            <button class="btn" id="end-call" disabled>End Call</button>
+        </div>
+    </div>
+    <script>
+        const localVideo = document.getElementById('local-video');
+        const remoteVideo = document.getElementById('remote-video');
+        const startCallButton = document.getElementById('start-call');
+        const endCallButton = document.getElementById('end-call');
+
+        // You would need JavaScript and WebRTC to handle actual video streaming and conferencing here.
+
+        // For a full-featured video conferencing app, you would need a signaling server and more.
+    </script>
+</body>
+</html>
